@@ -6,6 +6,7 @@ class Human {
     private int alter;
     private double groesse;
 
+
     //constructor
 
     public Human(String name, String vorname) {
@@ -86,7 +87,14 @@ class Student extends Human {
     //methods
 
     boolean hasBetterGrade(Student student) {
-        return this.note < student.getNote();
+        if (this.note < student.getNote()) {
+            System.out.println(this.getVorname() + " hat die bessere Note.");
+            return true;
+        } else {
+            System.out.println(student.getVorname() + " hat die bessere Note.");
+            return false;
+        }
+
     }
 
 }
