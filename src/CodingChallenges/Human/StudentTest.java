@@ -8,11 +8,11 @@ class StudentTest {
 
     @Test
     void hasBetterGrade() {
-        Student kjell = new Student("Hanken", "Kjell");
+        Student alex = new Student("Müller", "Alex");
         Student julian = new Student("Kropp", "Julian");
-        kjell.setNote(1.3);
+        alex.setNote(1.3);
         julian.setNote(2.3);
-        assertFalse(julian.hasBetterGrade(kjell));
+        assertFalse(julian.hasBetterGrade(alex));
 
     }
 }
