@@ -59,4 +59,8 @@ public class Animal {
         return !onlyAnimal() && !onlyPlant();
 
     }
+
+    public boolean atLeastOne() {
+
+    }
 }
