@@ -25,7 +25,7 @@ public class Animal {
     }
 
     //Methods
-    public void addPlantFood(Plant plant) {
+    public void addFood(Plant plant) {
         for (int i = 0; i < plants.length; i++) {
             if(plants[i] != null) {
                 plants[i] = plant;
@@ -33,7 +33,7 @@ public class Animal {
             }
         }
     }
-    public void addAnimalFood(Animal animal) {
+    public void addFood(Animal animal) {
         for (int i = 0; i < animals.length; i++) {
             if(animals[i] != null) {
                 animals[i] = animal;

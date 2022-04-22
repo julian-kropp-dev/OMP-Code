@@ -9,10 +9,10 @@ public class BioTest {
         Animal baer = new Animal("Bär");
         Animal fisch = new Animal("Fisch");
 
-        zebras.addPlantFood(gras);
-        loewe.addAnimalFood(zebras);
-        baer.addPlantFood(beeren);
-        baer.addAnimalFood(fisch);
+        zebras.addFood(gras);
+        loewe.addFood(zebras);
+        baer.addFood(beeren);
+        baer.addFood(fisch);
 
         System.out.println(getFoodDescription(zebras));
         System.out.println(getFoodDescription(baer));
