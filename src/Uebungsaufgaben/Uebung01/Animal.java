@@ -17,9 +17,10 @@ public class Animal {
     public void setName(String name) {
         this.name = name;
     }
-    public Plant[] getFood() {
+    public Plant[] getFoodPlants() {
         return plants;
     }
+    public Animal[] getFoodAnimals() {return animals;}
     public void setFood(Plant[] plants) {
         this.plants = plants;
     }
@@ -27,7 +28,7 @@ public class Animal {
     //Methods
     public void addFood(Plant plant) {
         for (int i = 0; i < plants.length; i++) {
-            if(plants[i] != null) {
+            if(plants[i] == null) {
                 plants[i] = plant;
                 break;
             }
@@ -35,7 +36,7 @@ public class Animal {
     }
     public void addFood(Animal animal) {
         for (int i = 0; i < animals.length; i++) {
-            if(animals[i] != null) {
+            if(animals[i] == null) {
                 animals[i] = animal;
                 break;
             }
