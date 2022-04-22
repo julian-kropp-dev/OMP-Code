@@ -6,7 +6,7 @@ public class Animal {
     private Plant[] plants = new Plant[10];
     private Animal[] animals = new Animal[10];
     //Constructor
-    public Animal(String name, Plant[] food) {
+    public Animal(String name) {
         this.name = name;
     }
 
@@ -62,5 +62,14 @@ public class Animal {
 
     public boolean atLeastOne() {
 
+    }
+
+    public boolean isHerbivore() {
+    }
+
+    public boolean isCarnivore() {
+    }
+
+    public boolean isOmnivore() {
     }
 }
