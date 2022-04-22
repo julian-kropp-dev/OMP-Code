@@ -42,6 +42,8 @@ public class Animal {
             }
         }
     }
+
+    //Pflanzenfresser
     public boolean onlyPlant() {
         for (Animal animal : animals) {
             if (animal != null) {
@@ -50,6 +52,8 @@ public class Animal {
         }
         return true;
     }
+
+    //Fleischfresser
     public boolean onlyAnimal() {
         for (Plant plant : plants) {
             if (plant != null) {
@@ -58,25 +62,13 @@ public class Animal {
         }
         return true;
     }
+
+    //Allesfresser
     public boolean eatsBoth() {
         return !onlyAnimal() && !onlyPlant();
 
     }
 
-    public boolean atLeastOne() {
-        return false;
 
-    }
 
-    public boolean isHerbivore() {
-        return false;
-    }
-
-    public boolean isCarnivore() {
-        return false;
-    }
-
-    public boolean isOmnivore() {
-        return false;
-    }
 }
