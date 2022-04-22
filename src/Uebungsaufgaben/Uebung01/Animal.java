@@ -29,6 +29,7 @@ public class Animal {
         for (int i = 0; i < plants.length; i++) {
             if(plants[i] != null) {
                 plants[i] = plant;
+                break;
             }
         }
     }
@@ -36,6 +37,7 @@ public class Animal {
         for (int i = 0; i < animals.length; i++) {
             if(animals[i] != null) {
                 animals[i] = animal;
+                break;
             }
         }
     }
@@ -61,15 +63,19 @@ public class Animal {
     }
 
     public boolean atLeastOne() {
+        return false;
 
     }
 
     public boolean isHerbivore() {
+        return false;
     }
 
     public boolean isCarnivore() {
+        return false;
     }
 
     public boolean isOmnivore() {
+        return false;
     }
 }
