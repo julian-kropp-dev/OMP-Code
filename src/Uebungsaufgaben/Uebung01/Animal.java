@@ -43,16 +43,16 @@ public class Animal {
         }
     }
     public boolean onlyPlant() {
-        for (int i = 0; i < animals.length; i++) {
-            if (animals[i] != null) {
+        for (Animal animal : animals) {
+            if (animal != null) {
                 return false;
             }
         }
         return true;
     }
     public boolean onlyAnimal() {
-        for (int i = 0; i < plants.length; i++) {
-            if (plants[i] != null) {
+        for (Plant plant : plants) {
+            if (plant != null) {
                 return false;
             }
         }
