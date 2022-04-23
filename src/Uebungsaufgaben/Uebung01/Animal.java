@@ -21,9 +21,7 @@ public class Animal {
         return plants;
     }
     public Animal[] getFoodAnimals() {return animals;}
-    public void setFood(Plant[] plants) {
-        this.plants = plants;
-    }
+
 
     //Methods
     public void addFood(Plant plant) {
