@@ -21,11 +21,11 @@ public class BioTest {
     }
 
     private static String getFoodDescription(Animal animal) {
-        if(animal.isHerbivore()) {
+        if(animal.onlyPlant()) {
             return animal.getName() + " ist ein Pflanzenfresser";
-        } else if(animal.isCarnivore()) {
+        } else if(animal.onlyAnimal()) {
             return animal.getName() + " ist ein Fleischfresser";
-        } else if(animal.isOmnivore()) {
+        } else if(animal.eatsBoth()) {
             return animal.getName() + " ist ein Allesfresser";
         } else {
             return animal.getName() + " mag nix";
