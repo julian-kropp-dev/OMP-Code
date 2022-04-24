@@ -1,0 +1,50 @@
+<diagram program="umletino" version="14.3.0"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>20</x><y>98</y><w>270</w><h>160</h></coordinates><panel_attributes>*Plant*
+--
+- name: String
+- description: String
+--
++ Plant(name: String, description: String)
++ getName(): String
++ setName(name: String): void
++ getDescription(): String
++ seDescription(description: String): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>88</y><w>410</w><h>270</h></coordinates><panel_attributes>*Animal*
+--
+- name: String
+- plants: Plant[]
+- animals: Animal[]
+--
++ Animal(name: String)
++ addFood(food: Plant)
++ addFood(food: Animal)
++ getName(): String
++ setName(name: String): void
++ getFoodPlants(): Plant[]
++ getFoodAnimals(): Animal[]
++ onlyPlant(): boolean
++ onlyAnimal(): boolean
++ eatsBoth(): boolean 
++ eatsAtLeastOnePlant(): boolean
++ eatsAtLeastOneAnimal(): boolean 
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>280</x><y>150</y><w>240</w><h>50</h></coordinates><panel_attributes>m2=0..10
+r2=-plantFoods</panel_attributes><additional_attributes>10;20;220;20</additional_attributes></element><element><id>Relation</id><coordinates><x>320</x><y>0</y><w>400</w><h>160</h></coordinates><panel_attributes>lt=&lt;&lt;-
+m1=0..10
+r1=- animalFoods</panel_attributes><additional_attributes>180;130;10;130;10;10;380;10;380;90</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>421</y><w>210</w><h>70</h></coordinates><panel_attributes>_lion: Animal_
+--
+name: "Löwe"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>421</y><w>210</w><h>70</h></coordinates><panel_attributes>_zebra: Animal_
+--
+name: "Zebra"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>780</x><y>421</y><w>210</w><h>70</h></coordinates><panel_attributes>_gras: Plant_
+--
+name: "Gras"
+description: "ist grün"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>591</y><w>210</w><h>70</h></coordinates><panel_attributes>_bear: Animal_
+--
+name: "Bär"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>591</y><w>210</w><h>70</h></coordinates><panel_attributes>_fish: Animal_
+--
+name: "Fisch"</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>721</y><w>210</w><h>70</h></coordinates><panel_attributes>_berry: Plant_
+--
+name: "Beere"
+description: "ist rot"</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>440</y><w>220</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+r1=animalFoods</panel_attributes><additional_attributes>200;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>440</y><w>200</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+r1 = plantFoods</panel_attributes><additional_attributes>180;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>610</y><w>210</w><h>40</h></coordinates><panel_attributes>lt=&lt;-
+r1=animalFoods</panel_attributes><additional_attributes>190;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>620</y><w>210</w><h>160</h></coordinates><panel_attributes>lt=&lt;-
+r1 = plantFoods</panel_attributes><additional_attributes>190;140;10;10</additional_attributes></element></diagram>
