@@ -64,7 +64,24 @@ public class Animal {
     //Allesfresser
     public boolean eatsBoth() {
         return !onlyAnimal() && !onlyPlant();
+    }
 
+    public boolean eatsAtLeastOnePlant() {
+        for (Plant plant : plants) {
+            if (plant != null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean eatsAtLeastOneAnimal() {
+        for (Animal animal : animals) {
+            if (animal != null) {
+                return true;
+            }
+        }
+        return false;
     }
 
 
