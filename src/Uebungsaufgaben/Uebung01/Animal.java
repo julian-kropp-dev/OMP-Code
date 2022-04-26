@@ -26,15 +26,22 @@ public class Animal {
     //Methods
     public void addFood(Plant plant) {
         for (int i = 0; i < plants.length; i++) {
-            if(plants[i] == null) {
+            if (plants[i] == plant) {
+                break;
+            }
+            else if(plants[i] == null) {
                 plants[i] = plant;
                 break;
             }
         }
     }
+
     public void addFood(Animal animal) {
         for (int i = 0; i < animals.length; i++) {
-            if(animals[i] == null) {
+            if (animals[i].equals(animal)) {
+                break;
+            }
+            else if(animals[i] == null) {
                 animals[i] = animal;
                 break;
             }
@@ -63,7 +70,7 @@ public class Animal {
 
     //Allesfresser
     public boolean eatsBoth() {
-        return !onlyAnimal() && !onlyPlant();
+        return eatsAtLeastOneAnimal() && eatsAtLeastOnePlant();
     }
 
     public boolean eatsAtLeastOnePlant() {

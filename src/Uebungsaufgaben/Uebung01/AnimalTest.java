@@ -10,12 +10,14 @@ import static org.junit.jupiter.api.Assertions.*;
 class AnimalTest {
     Animal animal1 = new Animal("Zebra");
     Plant plant1 = new Plant("Gras", " ist grün");
+    Plant plant2 = new Plant("jbdlhgh0", " ist grün");
     @Test
     void addFood() {
+        animal1.addFood(plant1);
+        System.out.println(Arrays.toString(animal1.getFoodPlants()));
+        animal1.addFood(plant2);
+        System.out.println(Arrays.toString(animal1.getFoodPlants()));
 
-        //animal1.addFood(plant1);
-        assertTrue(animal1.onlyPlant());
-        assertTrue(animal1.onlyAnimal());
     }
     @Test
     void getName() {
