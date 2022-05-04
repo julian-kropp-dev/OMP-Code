@@ -50,22 +50,12 @@ public class Animal {
 
     //Pflanzenfresser
     public boolean onlyPlant() {
-        for (Animal animal : animals) {
-            if (animal != null) {
-                return false;
-            }
-        }
-        return true;
+        return !eatsAtLeastOneAnimal() && eatsAtLeastOnePlant();
     }
 
     //Fleischfresser
     public boolean onlyAnimal() {
-        for (Plant plant : plants) {
-            if (plant != null) {
-                return false;
-            }
-        }
-        return true;
+        return eatsAtLeastOneAnimal() && !eatsAtLeastOnePlant();
     }
 
     //Allesfresser
@@ -73,7 +63,7 @@ public class Animal {
         return eatsAtLeastOneAnimal() && eatsAtLeastOnePlant();
     }
 
-    public boolean eatsAtLeastOnePlant() {
+    private boolean eatsAtLeastOnePlant() {
         for (Plant plant : plants) {
             if (plant != null) {
                 return true;
@@ -82,7 +72,7 @@ public class Animal {
         return false;
     }
 
-    public boolean eatsAtLeastOneAnimal() {
+    private boolean eatsAtLeastOneAnimal() {
         for (Animal animal : animals) {
             if (animal != null) {
                 return true;
