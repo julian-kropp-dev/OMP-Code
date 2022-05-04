@@ -51,17 +51,17 @@ class Dance {
 
 class Figure {
     private String name;
-    private String descrption;
-    private Figure[] parts = new Figure[0];
+    private String description;
+    private Figure[] sequence = new Figure[0];
 
     public Figure(String name, String descrption) {
         this.name = name;
-        this.descrption = descrption;
+        this.description = descrption;
     }
 
-    public Figure(String name, Figure[] parts) {
+    public Figure(String name, Figure[] sequence) {
         this.name = name;
-        this.parts = parts;
+        this.sequence = sequence;
     }
 
     public boolean add( Figure inFigure ) {
