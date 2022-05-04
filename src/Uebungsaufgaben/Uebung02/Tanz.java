@@ -54,9 +54,9 @@ class Figure {
     private String description;
     private Figure[] sequence = new Figure[0];
 
-    public Figure(String name, String descrption) {
+    public Figure(String name, String description) {
         this.name = name;
-        this.description = descrption;
+        this.description = description;
     }
 
     public Figure(String name, Figure[] sequence) {
