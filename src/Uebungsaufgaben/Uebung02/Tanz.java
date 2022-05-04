@@ -109,13 +109,13 @@ class LatinDance extends Dance{
 
 class DanceDatabase {
     public static void main(String[] args) {
-        Figure basicMove = new Figure("Basic Move", "Lorem Ipsum");
-        Figure fan = new Figure("Fan", "Lorem ipsum");
-        Figure promenade = new Figure("Promenade", "Lorem ipsum");
-        Figure spin_turn = new Figure("Spin Turn", "Lorem ipsum");
-        Figure natural_turn = new Figure("Natual Dance", "Lorem ipsum");
-        Figure chasse = new Figure("Chasse", "Lorem ipsum");
-        Figure whisk = new Figure("Whisk", new Figure[]{chasse});
+        Figure basicMove = new Figure("Basic Move", "Hier könnte IHRE Werbung stehen!");
+        Figure fan = new Figure("Fan", "Hier könnte IHRE Werbung stehen!");
+        Figure promenade = new Figure("Promenade", "Hier könnte IHRE Werbung stehen!");
+        Figure spin_turn = new Figure("Spin Turn", "Hier könnte IHRE Werbung stehen!");
+        Figure natural_turn = new Figure("Natual Dance", "Hier könnte IHRE Werbung stehen!");
+        Figure chasse = new Figure("Chasse", "Hier könnte IHRE Werbung stehen!");
+        Figure whisk = new Figure("Whisk", new Figure[]{promenade, chasse});
 
 
         LatinDance jive = new LatinDance("Jive", "4/4" );
@@ -134,13 +134,6 @@ class DanceDatabase {
 
         whisk.add(promenade);
         whisk.add(chasse);
-
-
-
-
-
-
-
 
 
     }
