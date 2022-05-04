@@ -57,11 +57,13 @@ class Figure {
     public Figure(String name, String description) {
         this.name = name;
         this.description = description;
+        this.sequence = null;
     }
 
     public Figure(String name, Figure[] sequence) {
         this.name = name;
         this.sequence = sequence;
+        this.description = null;
     }
 
     public boolean add( Figure inFigure ) {
