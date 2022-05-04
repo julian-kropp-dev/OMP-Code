@@ -64,23 +64,38 @@ class Figure {
         this.parts = parts;
     }
 
-    public boolean add(Figure figure) {
-        if (!contains(figure)) {
-            Arrays.fill(parts, figure);
+    public boolean add( Figure inFigure ) {
+    	if ( sequence == null )					// keine Umwandlung von Beschreibungsfiguren in Sequenzfiguren erlaubt
+    		return false;
+        if ( !inFigure.contains(this) ) {		// 
+        	Figure[] neuSequenz = new Figure[sequence.length+1];
+            for ( int i = 0; i < sequence.length; i++ ) {
+            	neuSequenz[i] = sequence[i];
+            };
+            neuSequenz[sequence.length] = inFigure;
             return true;
-        } else {
-            return false;
         }
+        return false;
     }
+    
+    
+    //
+    // protected
+    //
 
-    private boolean contains(Figure figure) {
-        for (Figure part : parts) {
-            if (part == figure) {
+    protected boolean contains( Figure inFigure ) {
+    	if ( sequence == null ) {
+    		return false;
+    	}
+        for ( Figure seqItem : sequence ) {
+            if ( seqItem == inFigure )
                 return true;
+            else {
+            	if ( seqItem.contains(inFigure) )
+            		return true;
             }
         }
         return false;
-
     }
 }
 
