@@ -52,7 +52,7 @@ class Dance {
 class Figure {
     private String name;
     private String descrption;
-    private Figure[] parts;
+    private Figure[] parts = new Figure[0];
 
     public Figure(String name, String descrption) {
         this.name = name;
