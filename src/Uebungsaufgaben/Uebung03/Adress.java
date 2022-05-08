@@ -1,6 +1,6 @@
 package Uebungsaufgaben.Uebung03;
 
-public class Address {
+public class Adress {
 	
 	private String street;
 	private String postCode;

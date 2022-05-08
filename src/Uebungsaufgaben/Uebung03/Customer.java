@@ -4,8 +4,8 @@ public class Customer {
 	
 	private String name;
 	private Account[] accounts;
-	private Address homeAddress;
-	private Address workAddress;
+	private Adress homeAdress;
+	private Adress workAdress;
 	
 	public String getName() { return name; }
 	
@@ -15,12 +15,12 @@ public class Customer {
 	
 	public void setAccounts(Account[] accounts) { this.accounts = accounts; }
 	
-	public Address getHomeAddress() { return homeAddress; }
+	public Adress getHomeAdress() { return homeAdress; }
 	
-	public void setHomeAddress(Address homeAddress) { this.homeAddress = homeAddress; }
+	public void setHomeAdress(Adress homeAdress) { this.homeAdress = homeAdress; }
 	
-	public Address getWorkAddress() { return workAddress; }
+	public Adress getWorkAdress() { return workAdress; }
 	
-	public void setWorkAddress(Address workAddress) { this.workAddress = workAddress; }
+	public void setWorkAdress(Adress workAdress) { this.workAdress = workAdress; }
 
 }
