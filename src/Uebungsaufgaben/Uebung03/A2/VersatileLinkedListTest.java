@@ -1,10 +1,10 @@
-package Uebungsaufgaben.Uebung03;
+package Uebungsaufgaben.Uebung03.A2;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 //Wir haben uns gegen eine Main-Methode und für einen JUnit Test entschieden.
-//Wir denken, Main Methoden sind nicht zum Testen geeignet.
+//Wir denken, Main Methoden sind nicht zum Testen geeignet, da wir eine geeignetere Variante (JUnit) bereits kennengelernt haben.
 class VersatileLinkedListTest {
     VersatileLinkedList liste = new VersatileLinkedList();
 

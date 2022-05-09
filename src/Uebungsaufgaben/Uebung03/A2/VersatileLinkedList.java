@@ -1,6 +1,6 @@
-package Uebungsaufgaben.Uebung03;
+package Uebungsaufgaben.Uebung03.A2;
 
-public class VersatileLinkedList extends LinkedStringList{
+public class VersatileLinkedList extends LinkedStringList {
 
     public void add(Integer value) {
         String newValue = value.toString();

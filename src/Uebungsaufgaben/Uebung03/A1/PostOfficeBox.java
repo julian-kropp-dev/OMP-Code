@@ -1,4 +1,4 @@
-package Uebungsaufgaben.Uebung03;
+package Uebungsaufgaben.Uebung03.A1;
 
 public class PostOfficeBox {
     private String poBoxCode;

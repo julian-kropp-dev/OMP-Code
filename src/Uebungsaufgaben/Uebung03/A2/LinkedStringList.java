@@ -1,4 +1,4 @@
-package Uebungsaufgaben.Uebung03;
+package Uebungsaufgaben.Uebung03.A2;
 
 public class LinkedStringList {
 
