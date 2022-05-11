@@ -63,7 +63,7 @@ class VersatileLinkedListTest {
         liste2.add("b");
         liste2.add("c");
         liste2.add("d");
-        liste.reverse(liste2);
+        LinkedStringList liste = liste2.reverse();
         assertEquals("d", liste.get(0));
         assertEquals("c", liste.get(1));
         assertEquals("b", liste.get(2));
