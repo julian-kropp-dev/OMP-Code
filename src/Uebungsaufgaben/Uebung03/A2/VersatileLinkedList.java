@@ -27,7 +27,7 @@ public class VersatileLinkedList extends LinkedStringList {
         }
     }
 
-    public LinkedStringList reverse(LinkedStringList liste) {
+    public LinkedStringList reverse() {
         VersatileLinkedList list = new VersatileLinkedList();
 
         for(int i = size() - 1; i >= 0; i--) {
