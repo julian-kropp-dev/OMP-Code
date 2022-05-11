@@ -90,10 +90,10 @@ class Figure {
     		return false;
     	}
         for ( Figure seqItem : sequence ) {
-            if ( seqItem == inFigure )
+            if ( seqItem == inFigure ) //Wenn Figur selbst gleich ist
                 return true;
             else {
-            	if ( seqItem.contains(inFigure) )
+            	if ( seqItem.contains(inFigure) ) //Wenn Figur in einer anderen Figur, die im Array liegt, enthalten ist
             		return true;
             }
         }
