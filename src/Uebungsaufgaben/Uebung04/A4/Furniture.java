@@ -26,8 +26,8 @@ class Room {
 }
 
 class Office extends Room {
-    private Chair chairs[];
-    private Desk desks[];
+    private Chair[] chairs;
+    private Desk[] desks;
 
     public Office(Furniture[] furniture, Chair[] chairs, Desk[] desks) {
         super(furniture);
