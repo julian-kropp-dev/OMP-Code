@@ -1,5 +1,8 @@
 package Uebungsaufgaben.Uebung04.A3;
 
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
 interface Comparable {
 	/**
 	 * Vergleicht das aufrufende Objekt mit dem als Parameter uebergebenen
@@ -65,8 +68,8 @@ class ComparableInteger extends Integer implements Comparable{
 
 
 public class ComparableTest {
-	//
-	public static void main(String[] args) {
+	@Test
+	void comparable() {
 		//
 		ComparableInteger c1 = new ComparableInteger(5);
 		ComparableInteger c2 = new ComparableInteger(7);
@@ -78,6 +81,8 @@ public class ComparableTest {
 		ComparableInteger[] comp = new ComparableInteger[] {c1, c2, c3, c4, c5, c6};
 		//
 		Comparable result = Utils.getMinimum(comp);
+		//
+		assertEquals(1, ( (Integer)result ).getValue() );
 		System.out.println( "Das Minimum ist: " + ( (Integer)result ).getValue() + " ; SOLL: 1" );
 		//
 		//
@@ -91,6 +96,9 @@ public class ComparableTest {
 		ComparableInteger[] comp2 = new ComparableInteger[] {c7, c8, c9, c10, c11, c12};
 		//
 		Comparable result2 = Utils.getMinimum(comp2);
+
+		assertEquals(4, ( (Integer)result2 ).getValue());
 		System.out.println( "Das Minimum ist: " + ( (Integer)result2 ).getValue() + " ; SOLL: 4" );
+
 	}
 }
