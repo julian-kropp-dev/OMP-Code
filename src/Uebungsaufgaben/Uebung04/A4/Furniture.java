@@ -43,15 +43,17 @@ class Office extends Room {
     }
 }
 
-class Test {
-    Chair chair0 = new Chair();
-    Desk desk = new Desk();
-    Chair chair1 = new Chair();
+class FurnitureTest {
+    public static void main(String[] args) {
+        Chair chair0 = new Chair();
+        Desk desk = new Desk();
+        Chair chair1 = new Chair();
 
-    Chair[] chairs = new Chair[]{chair0};
-    Furniture[] furnitures = new Furniture[]{chair0, desk, chair1};
-    Desk[] desks = new Desk[]{desk};
+        Chair[] chairs = new Chair[]{chair0};
+        Furniture[] furnitures = new Furniture[]{chair0, desk, chair1};
+        Desk[] desks = new Desk[]{desk};
 
-    Office office = new Office(furnitures, chairs, desks);
+        Office office = new Office(furnitures, chairs, desks);
+    }
 }
 
