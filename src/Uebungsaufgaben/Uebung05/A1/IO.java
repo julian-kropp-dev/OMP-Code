@@ -1,4 +1,4 @@
-package Uebungsaufgaben.Uebung04.A1;
+package Uebungsaufgaben.Uebung05.A1;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
