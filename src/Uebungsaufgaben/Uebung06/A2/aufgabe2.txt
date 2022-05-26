@@ -1,0 +1,3 @@
+Sobald ein Programm ausgeführt wird, werden automatisch alle Typparameter von Generics gelöscht.
+Es gibt keine Möglichkeit, zwischen Exceptions mit unterschiedlichen Typparametern im Catch Block zu unterscheiden, deshalb werden Genercis in Exceptions nicht unterstützt.
+Wenn man mehrere Catch Blöcke mit Generics hätte, wüsste die JVM zur Runtime nichtmehr, welcher Catch Block ausgeführt werden soll.
