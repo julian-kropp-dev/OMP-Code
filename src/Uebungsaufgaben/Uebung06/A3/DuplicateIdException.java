@@ -1,10 +1,16 @@
 package Uebungsaufgaben.Uebung06.A3;
 
-public class DuplicateIdException extends Throwable {
-    public DuplicateIdException() {
-    }
+public class DuplicateIdException extends InvalidIdException {
+	
+	public DuplicateIdException() {		
+	}
+	
+	public DuplicateIdException(String inMessage) {
+		super(inMessage);
+	}
 
-    public DuplicateIdException(String message) {
-        super(message);
-    }
+	public DuplicateIdException(String inMessage, int inErrorID ) {
+		super(inMessage, inErrorID);
+	}	
+
 }
