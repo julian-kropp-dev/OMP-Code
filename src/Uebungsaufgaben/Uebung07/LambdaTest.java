@@ -27,6 +27,8 @@ public class LambdaTest {
     }
 
     private static Function<Double, Double> makeChain(final Function<Double, Double>[] funs) {
+		if ( funs == null )
+			return (d) -> d;
         return (x) -> {
             for (Function<Double, Double> f : funs) {
                 x = f.calculate(x);
