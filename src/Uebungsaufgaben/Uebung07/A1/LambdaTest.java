@@ -40,7 +40,7 @@ public class LambdaTest {
 }
 
 
-interface Function<T extends Number, G extends Number> {
-    abstract G calculate(T number);
+public interface Function<T extends Number, G extends Number> {
+    public G calculate(T number);
 }
 
