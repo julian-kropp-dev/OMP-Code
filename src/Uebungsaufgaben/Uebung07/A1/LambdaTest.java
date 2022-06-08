@@ -1,4 +1,4 @@
-package Uebungsaufgaben.Uebung07;
+package Uebungsaufgaben.Uebung07.A1;
 
 public class LambdaTest {
     public static void main(String[] args) {
