@@ -1,5 +1,5 @@
 package Uebungsaufgaben.Uebung09.A3;
-
+//LÄUFT LEIDER NOCH NICHT
 import java.io.File;
 import java.io.IOException;
 
@@ -9,10 +9,10 @@ public class ImageFilterTest {
 
 	public static void main(String[] args) {
 		ImageFilter filterSequential = new ImageFilter();
-		//ImageFilter filterThreaded = new ImageFilterThreaded();
+		ImageFilter filterThreaded = new ImageFilterThreaded();
 		try {
 			filterSequential.setImage(new File("src/Uebungsaufgaben/Uebung09/A3/university_of_oldenburg.jpg"));
-			//filterThreaded.setImage(new File("./university_of_oldenburg.jpg"));
+			filterThreaded.setImage(new File("src/Uebungsaufgaben/Uebung09/A3/university_of_oldenburg.jpg"));
 		} catch (IOException e) {
 			e.printStackTrace();
 			return;
