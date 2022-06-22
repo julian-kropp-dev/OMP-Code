@@ -37,7 +37,8 @@ public class QuickSortThreaded extends QuickSort implements Runnable {
 				thread1.join();
 				thread2.join();
 			} catch (InterruptedException e) {
-				e.printStackTrace();
+	//			e.printStackTrace();		// dieses ist keine Fehlersituation, 
+								// sondern nur eine etwas "brutalere" Interrupt-Message
 			}
 
 
