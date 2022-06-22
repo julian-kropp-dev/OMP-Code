@@ -43,7 +43,8 @@ public class ImageFilterThreaded extends ImageFilter implements Runnable {
 			threadRechtsOben.join();
 			threadRechtsUnten.join();
 		} catch (InterruptedException e) {
-			e.printStackTrace();
+	//		e.printStackTrace();		// dieses ist keine Fehlersituation, 
+							// sondern nur eine etwas "brutalere" Interrupt-Message
 		}
 		return result;
 
