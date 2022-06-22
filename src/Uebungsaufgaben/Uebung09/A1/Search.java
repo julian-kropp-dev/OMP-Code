@@ -1,5 +1,4 @@
-package uebung09.a1;
-
+package Uebungsaufgaben.Uebung09.A1;
 
 public class Search {
 	
