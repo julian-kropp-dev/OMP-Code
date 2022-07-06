@@ -1,6 +1,5 @@
 package Uebungsaufgaben.Uebung11.A1;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public abstract class Fibonacci {
@@ -64,46 +63,45 @@ class FibonacciParallel extends Fibonacci {
 	}
 }
 
-//class FibonacciDynamic extends Fibonacci {
-//	private static final HashMap<Long, Long> myResult = new HashMap();
-//
-//	@Override
-//	public long calculate(int n) {
-//
-//		if (myResult.get(n) != null) {
-//			return myResult.get(n);
-//		}
-//
-//		if (myResult.get(n - 2) == null) {
-//			calculate(n - 2);
-//		}
-//
-//		if (myResult.get(n - 1) == null) {
-//			calculate(n - 1);
-//		}
-//
-//		long result = myResult.get(n -2) + myResult.get(n -1);
-//		myResult.put(result);
-//		return result;
-//	}
-//}
+class FibonacciDynamic extends Fibonacci {
+	private static final HashMap<Integer, Long> myResult = new HashMap<>();
 
-class FibonacciDynamicParallel extends Fibonacci {
+	public FibonacciDynamic() {
+		myResult.put(0, (long) 0);
+		myResult.put(1, (long) 1);
+	}
 
 	@Override
 	public long calculate(int n) {
-		long[] memo = new long[n + 1];
-		return calculateDynamic2(n, memo);
+
+		if (myResult.containsKey(n)) {
+			return myResult.get(n);
+		} else {
+
+			long result = calculate(n - 2) + calculate(n - 1);
+			myResult.put(n, result);
+			return result;
+		}
+	}
+}
+
+class FibonacciDynamicParallel extends Fibonacci {
+	private static final HashMap<Integer, Long> myResult = new HashMap<>();
+
+	public FibonacciDynamicParallel() {
+		myResult.put(0, (long) 0);
+		myResult.put(1, (long) 1);
 	}
 
-	private long calculateDynamic2(int n, long[] memo) {
-		long result;
-		if (memo[n] != 0) {
-			return memo[n];
-		}
+	@Override
+	public long calculate(int n) {
+		return calculateDynamic2(n);
+	}
 
-		if (n == 0 || n == 1) {
-			result = n;
+	private long calculateDynamic2(int n) {
+		long result;
+		if (myResult.containsKey(n)) {
+			return myResult.get(n);
 		} else {
 			FibonacciThread2 thread1 = new FibonacciThread2(n - 1);
 			FibonacciThread2 thread2 = new FibonacciThread2(n - 2);
@@ -117,10 +115,10 @@ class FibonacciDynamicParallel extends Fibonacci {
 				e.printStackTrace();
 			}
 			result = thread1.getResult() + thread2.getResult();
-			memo[n] = result;
+			myResult.put(n, result);
 	}return result;}
 
-		class FibonacciThread2 extends Thread {
+	class FibonacciThread2 extends Thread {
 			private int n;
 			private long result;
 
@@ -138,7 +136,11 @@ class FibonacciDynamicParallel extends Fibonacci {
 			}
 		}
 
-	}
+
+}
+
+
+
 
 
 
