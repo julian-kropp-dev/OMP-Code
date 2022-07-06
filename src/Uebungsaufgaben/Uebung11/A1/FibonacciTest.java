@@ -11,15 +11,16 @@ class FibonacciTest {
 
 	FibonacciParallel fibparal = new FibonacciParallel();
 
-	FibonacciDynamic fibdyn = new FibonacciDynamic();
+	//FibonacciDynamic fibdyn = new FibonacciDynamic();
 
 	FibonacciDynamicParallel fibdynpar = new FibonacciDynamicParallel();
 	
 	@Test
 	void test() {
-		for (int i = 0; i < NUMBERS.length; i++) {
-			assertEquals(0,0);
-		}
+		System.out.println(fibrec.calculate(NUMBERS[3]));
+		System.out.println(fibparal.calculate(NUMBERS[3]));
+		//System.out.println(fibdyn.calculate(NUMBERS[3]));
+		System.out.println(fibdynpar.calculate(NUMBERS[3]));
 
 	}
 

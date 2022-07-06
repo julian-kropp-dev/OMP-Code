@@ -1,5 +1,8 @@
 package Uebungsaufgaben.Uebung11.A1;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+
 public abstract class Fibonacci {
 	
 	public abstract long calculate(int n);
@@ -36,13 +39,13 @@ class FibonacciParallel extends Fibonacci {
 				fib1.join();
 				fib2.join();
 			} catch (InterruptedException e) {
-				System.out.println("Interrupted!");
+				return -1;
 			}
 			return fib1.getResult() + fib2.getResult();
 		}
 	}
 
-	class FibonacciThread extends Thread {
+	private class FibonacciThread extends Thread {
 		private int n;
 		private long result;
 
@@ -61,30 +64,29 @@ class FibonacciParallel extends Fibonacci {
 	}
 }
 
-class FibonacciDynamic extends Fibonacci {
-
-	@Override
-	public long calculate(int n) {
-		long[] memo = new long[n + 1];
-		return calculateDynamic(n, memo);
-	}
-
-	private long calculateDynamic (int n, long[] memo) {
-		long result;
-
-		if (memo[n] != 0) {
-			return memo[n];
-		}
-
-		if (n == 0 || n == 1) {
-			result = n;
-		} else {
-			result = calculateDynamic(n - 1, memo) + calculateDynamic(n - 2, memo);
-		}
-		memo[n] = result;
-		return result;
-	}
-}
+//class FibonacciDynamic extends Fibonacci {
+//	private static final HashMap<Long, Long> myResult = new HashMap();
+//
+//	@Override
+//	public long calculate(int n) {
+//
+//		if (myResult.get(n) != null) {
+//			return myResult.get(n);
+//		}
+//
+//		if (myResult.get(n - 2) == null) {
+//			calculate(n - 2);
+//		}
+//
+//		if (myResult.get(n - 1) == null) {
+//			calculate(n - 1);
+//		}
+//
+//		long result = myResult.get(n -2) + myResult.get(n -1);
+//		myResult.put(result);
+//		return result;
+//	}
+//}
 
 class FibonacciDynamicParallel extends Fibonacci {
 
