@@ -36,7 +36,7 @@ class FibonacciTest {
 		for (int i = 0; i < NUMBERS.length; i++) {
 			fibrec.calculate(NUMBERS[i]);
 		}
-		System.out.println(System.currentTimeMillis() - start);
+		System.out.println("Recursive: " + (System.currentTimeMillis() - start) );
 
 	}
 
@@ -46,7 +46,7 @@ class FibonacciTest {
 		for (int i = 0; i < NUMBERS.length; i++) {
 			fibparal.calculate(NUMBERS[i]);
 		}
-		System.out.println(System.currentTimeMillis() - start);
+		System.out.println("Parallel: " + (System.currentTimeMillis() - start) );
 
 	}
 
@@ -56,7 +56,7 @@ class FibonacciTest {
 		for (int i = 0; i < NUMBERS.length; i++) {
 			fibdyn.calculate(NUMBERS[i]);
 		}
-		System.out.println(System.currentTimeMillis() - start);
+		System.out.println("Dynamic: " + (System.currentTimeMillis() - start) );
 
 	}
 
@@ -66,13 +66,34 @@ class FibonacciTest {
 		for (int i = 0; i < NUMBERS.length; i++) {
 			fibdynpar.calculate(NUMBERS[i]);
 		}
-		System.out.println(System.currentTimeMillis() - start);
+		System.out.println("ParallelDynamic: " + (System.currentTimeMillis() - start) );
 
 	}
 }
+//----------------
+// Aufgabe 2 f)
+//----------------
 
 /*
 Zeit Stoppen: Wie geht denn das? Könnt ihr uns nicht vielleicht erklären, wie man auf die Systemzeit zugreift?
 Im Skript steht zu sowelchen Fragen nichts, warum gibt es dann eine Frage zu Themen, die wir noch nie hatten?
 Finde ich nicht so nett...
- */
+*/
+
+/*
+Timing-Ergebnisse: 
+Recursive: 1ms
+Parallel: 16943ms
+Dynamic: 0ms
+ParallelDynamic: 0ms (bei anderen Messungen etwas langsamer als Dynamic)
+*/
+
+/*
+Die Timing-Ergebnisse entsprechen nicht der Erwartung, dass Parallelisierung beschleunigt.
+Das hat mehrere Gründe u.a.:
+- Die Erzeugung von Threads ist sehr viel "teurer" als ein Methodenaufruf
+- Die Threads tun inhaltlich fast garnichts (nur Addition), d.h. die Thread-Erzeugung/-Vernichtung ist die maßgebliche Laufzeit
+- Bei der parallelen, rekursiven Methode werden tausende von Threads erzeugt, d.h.
+	- massiver Zeitaufwand fuer Thread-Erzeugung
+	- es kann fast nichts wirklich parallel stattfinden
+*/
