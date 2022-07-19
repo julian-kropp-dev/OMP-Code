@@ -14,7 +14,7 @@ class FibonacciTest {
 	FibonacciDynamic fibdyn = new FibonacciDynamic();
 
 	FibonacciDynamicParallel fibdynpar = new FibonacciDynamicParallel();
-	
+
 	@Test
 	void test() {
 
@@ -70,18 +70,10 @@ class FibonacciTest {
 
 	}
 }
-//----------------
-// Aufgabe 2 f)
-//----------------
+
 
 /*
-Zeit Stoppen: Wie geht denn das? Könnt ihr uns nicht vielleicht erklären, wie man auf die Systemzeit zugreift?
-Im Skript steht zu sowelchen Fragen nichts, warum gibt es dann eine Frage zu Themen, die wir noch nie hatten?
-Finde ich nicht so nett...
-*/
-
-/*
-Timing-Ergebnisse: 
+Timing-Ergebnisse:
 Recursive: 1ms
 Parallel: 16943ms
 Dynamic: 0ms
